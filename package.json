@@ -1,0 +1,25 @@
+{
+  "name": "1hr-language-support",
+  "displayName": "1hr language support",
+  "description": "Simple syntax highlighting for 1hr lang",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "1hr",
+      "aliases": ["1hr", "1hr"],
+      "extensions": [".1hr"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "1hr",
+      "scopeName": "source.1hr",
+      "path": "./syntaxes/1hr.tmLanguage.json"
+    }]
+  }
+}
