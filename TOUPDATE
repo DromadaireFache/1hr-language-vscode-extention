@@ -3,3 +3,5 @@
 ## To build the package
 * run `vsce package`
 
+## To install the package on local VSCode
+* run `code --install-extension 1hr-language-support-0.0.1.vsix`
