@@ -4,16 +4,35 @@
     },
     // symbols used as brackets
     "brackets": [
-        ["do", "end"],
+        ["do", "end"]
     ],
     // symbols that are auto closed when typing
     "autoClosingPairs": [
-        ["do", "end"],
-        ["\"", "\""]
+        {
+            "open": "do ",
+            "close": "end",
+            "notIn": ["string", "comment"]
+        },
+        {
+            "open": "\"",
+            "close": "\"",
+            "notIn": ["string", "comment"]
+        }
     ],
     // symbols that can be used to surround a selection
     "surroundingPairs": [
         ["do", "end"],
         ["\"", "\""]
+    ],
+    // rules for handling the "enter" key
+    "onEnterRules": [
+        {
+            "beforeText": "^\\s*do\\s*$",
+            "action": {
+                "indentAction": "IndentOutdent",
+                "appendText": "end",
+                "indent": "indent"
+            }
+        }
     ]
 }

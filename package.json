@@ -14,6 +14,10 @@
     "onLanguage:1hr"
   ],
   "main": "./out/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DromadaireFache/1hr-language-support.git"
+  },
   "contributes": {
     "languages": [{
       "id": "1hr",

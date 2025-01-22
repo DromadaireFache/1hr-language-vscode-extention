@@ -1,0 +1,5 @@
+# When updating the extension do these steps
+
+## To build the package
+* run `vsce package`
+

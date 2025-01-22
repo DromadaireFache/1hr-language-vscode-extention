@@ -3,7 +3,12 @@
 	"name": "1hr",
 	"patterns": [
 		{"include": "#keywords"},
-		{"include": "#strings"}
+		{"include": "#comments"},
+		{"include": "#strings"},
+		{"include": "#functions"},
+		{"include": "#types"},
+		{"include": "#numbers"},
+		{"include": "#variables"}
 	],
 	"repository": {
 		"keywords": {
@@ -12,16 +17,38 @@
 				"match": "\\b(if|while|do|end)\\b"
 			}]
 		},
-		"strings": {
-			"name": "string.quoted.double.1hr",
-			"begin": "\"",
-			"end": "\""
-		}
+        "strings": {
+            "name": "string.quoted.double.1hr",
+            "begin": "\"",
+            "end": "\"|$"
+        },
+		"comments": {
+			"name": "comment.line.number-sign.1hr",
+			"begin": "#",
+			"end": "$"
+		},
+        "functions": {
+            "patterns": [{
+                "name": "support.function.1hr",
+                "match": "\\b(print|scan|dup|2dup)\\b|\\+|\\-|\\*|\\/|=|!=|>|<|<=|>=|\\*\\*"
+            }]
+        },
+        "types": {
+            "patterns": [{
+                "name": "support.type.1hr",
+                "match": "\\b(int|float|str)\\b"
+            }]
+        },
+        "numbers": {
+            "patterns": [{
+                "name": "constant.numeric.1hr",
+                "match": "(\\b\\d+|\\b\\d+\\.\\d*|\\.\\d*)\\b"
+            }]
+        },
+        "variables": {
+            "name": "variable.other.1hr",
+            "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+        }
 	},
-    "editor.suggest.filteredTypes": {
-        "keywords": false,
-        "snippets": false,
-        "text": false
-    },
 	"scopeName": "source.1hr"
 }
