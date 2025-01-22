@@ -3,12 +3,17 @@
   "displayName": "1hr language support",
   "description": "Simple syntax highlighting for 1hr lang",
   "version": "0.0.1",
+  "publisher": "Charles-Benoit",
   "engines": {
     "vscode": "^1.96.0"
   },
   "categories": [
     "Programming Languages"
   ],
+  "activationEvents": [
+    "onLanguage:1hr"
+  ],
+  "main": "./out/extension.js",
   "contributes": {
     "languages": [{
       "id": "1hr",

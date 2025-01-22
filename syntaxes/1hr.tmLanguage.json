@@ -9,20 +9,19 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.1hr",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(if|while|do|end)\\b"
 			}]
 		},
 		"strings": {
 			"name": "string.quoted.double.1hr",
 			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.1hr",
-					"match": "\\\\."
-				}
-			]
+			"end": "\""
 		}
 	},
+    "editor.suggest.filteredTypes": {
+        "keywords": false,
+        "snippets": false,
+        "text": false
+    },
 	"scopeName": "source.1hr"
 }
