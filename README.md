@@ -19,7 +19,7 @@ This extension provides language support for the 1hr programming language in Vis
 ## Usage
 
 Once installed, open any `.1hr` file to activate the extension and start using the features.
-To download the interpreter, checkout the "[git repo](https://github.com/DromadaireFache/One-hour-lang.git)"!
+To download the interpreter, checkout the [git repo](https://github.com/DromadaireFache/One-hour-lang.git)!
 
 ## Contributing
 
