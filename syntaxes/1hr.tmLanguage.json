@@ -30,7 +30,7 @@
         "functions": {
             "patterns": [{
                 "name": "support.function.1hr",
-                "match": "\\b(print|scan|dup|2dup)\\b|\\+|\\-|\\*|\\/|=|!=|>|<|<=|>=|\\*\\*"
+                "match": "\\b(print|scan|dup|2dup|swap|rot)\\b|\\+|\\-|\\*|\\/|=|!=|>|<|<=|>=|\\*\\*"
             }]
         },
         "types": {
