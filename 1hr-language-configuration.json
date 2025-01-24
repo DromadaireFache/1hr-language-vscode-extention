@@ -4,7 +4,7 @@
     },
     // symbols used as brackets
     "brackets": [
-        ["do", "end"]
+        ["do", "end"],
     ],
     // symbols that are auto closed when typing
     "autoClosingPairs": [

@@ -11,7 +11,8 @@
     "Programming Languages"
   ],
   "activationEvents": [
-    "onLanguage:1hr"
+    "onLanguage:1hr",
+    "onLanguage:xhr"
   ],
   "main": "./out/extension.js",
   "repository": {
@@ -19,16 +20,31 @@
     "url": "https://github.com/DromadaireFache/1hr-language-support.git"
   },
   "contributes": {
-    "languages": [{
-      "id": "1hr",
-      "aliases": ["1hr", "1hr"],
-      "extensions": [".1hr"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "1hr",
-      "scopeName": "source.1hr",
-      "path": "./syntaxes/1hr.tmLanguage.json"
-    }]
+    "languages": [
+        {
+            "id": "1hr",
+            "aliases": ["1hr", "1hr"],
+            "extensions": [".1hr"],
+            "configuration": "./1hr-language-configuration.json"
+        },
+        {
+            "id": "xhr",
+            "aliases": ["xhr", "xhr"],
+            "extensions": [".xhr"],
+            "configuration": "./xhr-language-configuration.json"
+        }
+    ],
+    "grammars": [
+        {
+            "language": "1hr",
+            "scopeName": "source.1hr",
+            "path": "./syntaxes/1hr.tmLanguage.json"
+        },
+        {
+            "language": "xhr",
+            "scopeName": "source.xhr",
+            "path": "./syntaxes/xhr.tmLanguage.json"
+        }
+    ]
   }
 }
