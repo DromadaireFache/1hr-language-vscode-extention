@@ -8,13 +8,18 @@
 		{"include": "#functions"},
 		{"include": "#types"},
 		{"include": "#numbers"},
+		{"include": "#builtin_classes"},
 		{"include": "#variables"}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.xhr",
-				"match": "\\b(if|while|do|end)\\b"
+				"match": "\\b(if|while|do|end|import|else)\\b"
+			},
+			{
+				"name": "storage.type.xhr",
+				"match": "\\b(Null|def)\\b"
 			}]
 		},
         "strings": {
@@ -30,7 +35,7 @@
         "functions": {
             "patterns": [{
                 "name": "support.function.xhr",
-                "match": "\\b(print|scan|dup|2dup|swap|rot)\\b|\\+|\\-|\\*|\\/|=|!=|>|<|<=|>=|\\*\\*"
+                "match": "\\b(print|scan|dup|2dup|swap|rot|set|get|len|debug|throw|exit|time)\\b|\\+|\\-|\\*|\\/|=|:|!|!=|>|<|<=|>=|\\*\\*|\\.\\.\\."
             }]
         },
         "types": {
@@ -42,7 +47,13 @@
         "numbers": {
             "patterns": [{
                 "name": "constant.numeric.xhr",
-                "match": "(\\b\\d+|\\b\\d+\\.\\d*|\\.\\d*)\\b"
+                "match": "(\\b\\d+|\\b\\d+\\.\\d*|\\.\\d+)\\b"
+            }]
+        },
+        "builtin_classes": {
+            "patterns": [{
+                "name": "entity.name.type.class.xhr",
+                "match": "\\b(Special|Exception):"
             }]
         },
         "variables": {
