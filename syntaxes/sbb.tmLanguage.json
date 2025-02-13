@@ -1,0 +1,59 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "sbb",
+	"patterns": [
+		{"include": "#keywords"},
+		{"include": "#comments"},
+		{"include": "#strings"},
+		{"include": "#chars"},
+		{"include": "#builtin_classes"},
+		{"include": "#functions"},
+		{"include": "#numbers"},
+		{"include": "#variables"}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.sbb",
+				"match": "\\b(if|while|import|else|let|define|return)\\b"
+			},
+			{
+				"name": "storage.type.sbb",
+				"match": "\\b(void|True|False|cast)|(var|func)(\\[[0-9]+\\])?\\b"
+			}
+        ]
+		},
+        "strings": {
+            "name": "string.quoted.double.sbb",
+            "begin": "\"",
+            "end": "\"|$"
+        },
+        "chars": {
+            "name": "constant.character.escape.sbb",
+            "begin": "'",
+            "end": "'"
+        },
+		"comments": {
+            "name": "comment.line.double-slash.sbb",
+			"begin": "//",
+			"end": "$"
+		},
+        "functions": {
+            "name": "support.function.sbb",
+            "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b(?=\\s*\\()"
+        },
+        "numbers": {
+            "name": "constant.numeric.sbb",
+            "match": "\\-?(\\b\\d+|\\b\\d+\\.\\d*|\\.\\d+|0x[0-9a-fA-F]+|0b[01]+)\\b"
+        },
+        "builtin_classes": {
+            "name": "entity.name.type.class.sbb",
+            "match": "\\b(storechar|getchar|refr|getheap|keybin)\\b"
+        },
+        "variables": {
+            "name": "variable.other.sbb",
+            "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+        }
+	},
+	"scopeName": "source.sbb"
+}

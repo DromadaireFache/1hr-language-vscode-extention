@@ -19,7 +19,7 @@
 			},
 			{
 				"name": "storage.type.xhr",
-				"match": "\\b(Null|def)\\b"
+				"match": "\\b(Null|def|print|pop|push|scan|dup|2dup|swap|rot|set|get|len|debug|drop|throw|exit|time)\\b|\\+|\\-(?![0-9])|\\*|\\/|=|:|!=|!|:|>|<|<=|>=|\\*\\*|\\.\\.\\."
 			}]
 		},
         "strings": {
@@ -33,10 +33,8 @@
 			"end": "$"
 		},
         "functions": {
-            "patterns": [{
-                "name": "support.function.xhr",
-                "match": "\\b(print|scan|dup|2dup|swap|rot|set|get|len|debug|throw|exit|time)\\b|\\+|\\-|\\*|\\/|=|:|!|!=|>|<|<=|>=|\\*\\*|\\.\\.\\."
-            }]
+            "name": "support.function.xhr",
+            "match": "((?<=![a-zA-Z_][a-zA-Z0-9_\\.]+)[a-zA-Z_][a-zA-Z0-9_]+\\b)|(![a-zA-Z_][a-zA-Z0-9_]+(?!\\.)\\b)|((?<=def:)[a-zA-Z_][a-zA-Z0-9_]+(?!\\.)\\b)"
         },
         "types": {
             "patterns": [{
@@ -47,7 +45,7 @@
         "numbers": {
             "patterns": [{
                 "name": "constant.numeric.xhr",
-                "match": "(\\b\\d+|\\b\\d+\\.\\d*|\\.\\d+)\\b"
+                "match": "\\-{0,1}(\\b\\d+|\\b\\d+\\.\\d*|\\.\\d+)\\b"
             }]
         },
         "builtin_classes": {
