@@ -1,7 +1,7 @@
 {
-  "name": "1hr-language-support",
-  "displayName": "1hr language support",
-  "description": "Simple syntax highlighting for 1hr lang",
+  "name": "language-support",
+  "displayName": "language support for my custom languages",
+  "description": "Simple syntax highlighting for the custom languages: 1hr, xhr, sbb",
   "version": "0.0.1",
   "publisher": "Charles-Benoit",
   "engines": {
@@ -18,7 +18,7 @@
   "main": "./out/extension.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DromadaireFache/1hr-language-support.git"
+    "url": "https://github.com/DromadaireFache/my-languages-vscode-extention"
   },
   "contributes": {
     "languages": [
